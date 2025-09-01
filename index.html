@@ -8,73 +8,125 @@
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      background: #f4f6f9;
+      background: #f9fafc;
       color: #333;
     }
+
+    /* Hero Section */
     .hero {
       background: linear-gradient(120deg, #003366, #0059b3);
       color: white;
-      padding: 60px 20px;
+      padding: 70px 20px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
     .hero h1 {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       margin-bottom: 10px;
+      animation: fadeInDown 1s ease-in-out;
     }
     .hero p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       opacity: 0.9;
+      animation: fadeInUp 1s ease-in-out;
     }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Container */
     .container {
-      max-width: 700px;
-      margin: -40px auto 50px;
+      max-width: 750px;
+      margin: -40px auto 60px;
       background: #fff;
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 40px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      animation: fadeIn 1s ease-in-out;
     }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       margin-bottom: 20px;
       color: #003366;
+      border-left: 4px solid #007BFF;
+      padding-left: 10px;
     }
+
     p {
       font-size: 1rem;
       margin: 10px 0;
       line-height: 1.6;
     }
+
+    /* Buttons */
     .btn {
       display: inline-block;
       margin: 15px 10px;
       padding: 14px 28px;
       font-size: 1rem;
-      border-radius: 6px;
+      border-radius: 8px;
       border: none;
-      background: #007BFF;
+      background: linear-gradient(120deg, #007BFF, #0056b3);
       color: white;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
-    .btn:hover { background: #0056b3; }
-    .btn-secondary { background: #555; }
+    .btn:hover {
+      background: linear-gradient(120deg, #0056b3, #004080);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    .btn-secondary {
+      background: linear-gradient(120deg, #666, #444);
+    }
+
+    /* Hidden sections */
     .hidden { display: none; }
+
+    /* Cards */
     .card {
       border: 1px solid #e0e0e0;
-      border-radius: 10px;
-      padding: 20px;
+      border-radius: 12px;
+      padding: 25px;
       margin: 20px 0;
       background: #fafafa;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
+    .card:hover {
+      transform: translateY(-5px);
+      background: #fdfdfd;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
     input {
       padding: 12px;
       width: 100%;
       margin: 10px 0;
-      border-radius: 6px;
+      border-radius: 8px;
       border: 1px solid #ccc;
       font-size: 1rem;
+      transition: border 0.2s;
+    }
+    input:focus {
+      border-color: #007BFF;
+      outline: none;
+      box-shadow: 0 0 6px rgba(0,123,255,0.3);
     }
 
-    /* Popup modal */
+    /* Popup Modal */
     .modal {
       display: none;
       position: fixed;
@@ -83,20 +135,35 @@
       top: 0;
       width: 100%;
       height: 100%;
-      overflow: auto;
       background-color: rgba(0,0,0,0.6);
     }
     .modal-content {
       background-color: #fff;
       margin: 15% auto;
       padding: 30px;
-      border-radius: 10px;
+      border-radius: 12px;
       width: 90%;
       max-width: 400px;
       text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      position: relative;
+      animation: popIn 0.4s ease;
+    }
+    @keyframes popIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
     .modal-content h3 { margin-bottom: 15px; color: #003366; }
+    .close-btn {
+      position: absolute;
+      top: 12px;
+      right: 18px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #777;
+    }
+    .close-btn:hover { color: #000; }
+
     .copy-btn {
       background: #007BFF;
       color: white;
@@ -105,6 +172,7 @@
       border-radius: 6px;
       cursor: pointer;
       margin-top: 10px;
+      transition: background 0.3s ease;
     }
     .copy-btn:hover { background: #0056b3; }
   </style>
@@ -143,7 +211,7 @@
     <div id="confirmation-section" class="hidden">
       <h2>Your Password</h2>
       <p id="confirmation-msg"></p>
-      <div class="password-box">
+      <div class="card">
         Your Password: <span id="shop-id"></span>
       </div>
       <button class="btn" id="go-to-links-btn">Proceed to Training</button>
@@ -166,6 +234,7 @@
   <!-- Popup Modal -->
   <div id="passwordModal" class="modal">
     <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
       <h3>Your Password</h3>
       <p><span id="popup-password"></span></p>
       <button class="copy-btn" onclick="copyPassword()">Copy Password</button>
@@ -209,10 +278,15 @@
       detailsSection.classList.add("hidden");
       confirmationSection.classList.remove("hidden");
 
-      // Show modal with password
+      // Show popup modal
       document.getElementById("popup-password").innerText = shop.shopid;
       document.getElementById("passwordModal").style.display = "block";
     };
+
+    // Close modal
+    function closeModal() {
+      document.getElementById("passwordModal").style.display = "none";
+    }
 
     // Copy function
     function copyPassword() {
@@ -220,7 +294,7 @@
       navigator.clipboard.writeText(password).then(() => {
         document.getElementById("copy-msg").style.display = "block";
         setTimeout(() => {
-          document.getElementById("passwordModal").style.display = "none";
+          closeModal();
         }, 1200);
       });
     }
