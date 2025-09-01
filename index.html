@@ -1,252 +1,210 @@
-<!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Editorial by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>POSH Training Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f4f6f9;
+      color: #333;
+    }
+    .hero {
+      background: linear-gradient(120deg, #003366, #0059b3);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    .container {
+      max-width: 700px;
+      margin: -40px auto 50px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #003366;
+    }
+    p {
+      font-size: 1rem;
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+    .card {
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      background: #fafafa;
+    }
+    .password-box {
+      background: #f0f7ff;
+      border: 1px solid #007BFF;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px auto;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #003366;
+    }
+    .btn {
+      display: inline-block;
+      margin: 15px 10px;
+      padding: 14px 28px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: none;
+      background: #007BFF;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+    .btn-secondary {
+      background: #555;
+    }
+    .hidden {
+      display: none;
+    }
+    .img-placeholder {
+      width: 100%;
+      height: 180px;
+      background: url('https://source.unsplash.com/800x400/?business,training') center/cover no-repeat;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>POSH Training Portal</h1>
+    <p>Ensuring Respectful Workplaces</p>
+  </div>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+  <!-- Content -->
+  <div class="container">
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-									</ul>
-								</header>
+    <!-- Decorative image -->
+    <div class="img-placeholder"></div>
 
-							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h1>Hi, I’m Editorial<br />
-											by HTML5 UP</h1>
-											<p>A free and fully responsive site template</p>
-										</header>
-										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
-										<ul class="actions">
-											<li><a href="#" class="button big">Learn More</a></li>
-										</ul>
-									</div>
-									<span class="image object">
-										<img src="images/pic10.jpg" alt="" />
-									</span>
-								</section>
+    <div id="details-section">
+      <h2>Verify Your Details</h2>
+      <p id="shop-details"></p>
+      <p><strong>Are the above details correct?</strong></p>
+      <p style="color:#555;">क्या यह जानकारी सही है?</p>
+      <button class="btn" id="confirm-btn">Yes, I Confirm</button>
+    </div>
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Erat lacinia</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon fa-gem"></span>
-											<div class="content">
-												<h3>Portitor ullamcorper</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-paper-plane"></span>
-											<div class="content">
-												<h3>Sapien veroeros</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-rocket"></span>
-											<div class="content">
-												<h3>Quam lorem ipsum</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-signal"></span>
-											<div class="content">
-												<h3>Sed magna finibus</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-									</div>
-								</section>
+    <div id="confirmation-section" class="hidden">
+      <h2>Step 2: Here is your Password</h2>
+      <p id="confirmation-msg"></p>
+      <div class="password-box">
+        Password: <span id="shop-id"></span>
+      </div>
+      <p>Please copy this password and paste it into the <em>"Nickname"</em> field on the next page.</p>
+      <p>कृपया इस पासवर्ड को कॉपी करें और आगे जाकर <em>"Nickname"</em> वाले बक्से में भर दें।</p>
+      <button class="btn" id="go-to-links-btn">Proceed to Training</button>
+    </div>
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Ipsum sed dolor</h2>
-									</header>
-									<div class="posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-											<h3>Interdum aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-											<h3>Nulla amet dolore</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-											<h3>Tempus ullamcorper</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3>Sed etiam facilis</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3>Feugiat lorem aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3>Amet varius aliquam</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-									</div>
-								</section>
+    <div id="final-section" class="hidden">
+      <h2>Step 3: Choose Your Training</h2>
+      <div class="card">
+        <p><strong>Owner/Manager Training</strong></p>
+        <button class="btn" id="btn-employer">Start Employer Training</button>
+      </div>
+      <div class="card">
+        <p><strong>Employee Training</strong></p>
+        <button class="btn btn-secondary" id="btn-employee">Start Employee Training</button>
+      </div>
+    </div>
+  </div>
 
-						</div>
-					</div>
+  <script>
+    const shopData = [
+      { shopid: 101, shopname: "FABINDIA", marketname: "KHAN MARKET" },
+      { shopid: 102, shopname: "BLUE TOKAI", marketname: "RAJOURI GARDEN" },
+      { shopid: 103, shopname: "SHOPPE", marketname: "HAUZ KHAS VILLAGE" },
+      { shopid: 104, shopname: "NAPPA DORI", marketname: "VASANT VIHAR" },
+      { shopid: 105, shopname: "HALDIRAMS", marketname: "NEW FRIENDS COLONY" }
+    ];
 
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
+    // Your Google Apps Script Web App URL
+    const SHEET_URL = "https://script.google.com/macros/s/AKfycbwE1pMUQ61CwBDXCA_q98YUm_34Uy9oNJQ8I_XBO4VAtUNAuB2EJOZ62h3UPVRs_hfHKw/exec";
+    // Logging helper
+    function trackUserDetails(shopid, shopname, marketname, role) {
+      fetch(SHEET_URL, {
+        method: "POST",
+        mode: "no-cors", // 👈 disables preflight & bypasses CORS
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          shopid, shopname, marketname, role,
+          timestamp: new Date().toISOString()
+        })
+      });
+      console.log("Logging:", shopid, shopname, marketname, role);
+    }
 
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
+    const params = new URLSearchParams(window.location.search);
+    const shopIdFromUrl = parseInt(params.get("shopid"));
+    const shopDetails = document.getElementById("shop-details");
+    const confirmationMsg = document.getElementById("confirmation-msg");
+    const shopIdElement = document.getElementById("shop-id");
 
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="generic.html">Generic</a></li>
-										<li><a href="elements.html">Elements</a></li>
-										<li>
-											<span class="opener">Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Etiam Dolore</a></li>
-										<li><a href="#">Adipiscing</a></li>
-										<li>
-											<span class="opener">Another Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Maximus Erat</a></li>
-										<li><a href="#">Sapien Mauris</a></li>
-										<li><a href="#">Amet Lacinia</a></li>
-									</ul>
-								</nav>
+    const detailsSection = document.getElementById("details-section");
+    const confirmationSection = document.getElementById("confirmation-section");
+    const finalSection = document.getElementById("final-section");
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Ante interdum</h2>
-									</header>
-									<div class="mini-posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-									</div>
-									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
-									</ul>
-								</section>
+    const shop = shopData.find(shop => shop.shopid === shopIdFromUrl);
+    if (shop) {
+      shopDetails.innerText = `Shop: ${shop.shopname} | Market: ${shop.marketname}`;
+    } else {
+      shopDetails.innerText = "⚠️ Shop not found!";
+    }
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Get in touch</h2>
-									</header>
-									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-										<li class="icon solid fa-phone">(000) 000-0000</li>
-										<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
-										Nashville, TN 00000-0000</li>
-									</ul>
-								</section>
+    document.getElementById("confirm-btn").onclick = () => {
+      confirmationMsg.innerText = `Confirmed: ${shop.shopname}, ${shop.marketname}`;
+      shopIdElement.innerText = shop.shopid;
+      detailsSection.classList.add("hidden");
+      confirmationSection.classList.remove("hidden");
+    };
 
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
+    document.getElementById("go-to-links-btn").onclick = () => {
+      confirmationSection.classList.add("hidden");
+      finalSection.classList.remove("hidden");
+      window.scrollTo(0, document.body.scrollHeight);
+    };
 
-						</div>
-					</div>
+    const classroom1Link = "https://edpuzzle.com/assignments/68b1a7f9ddde8cb5f8362210/watch";
+    const classroom2Link = "https://edpuzzle.com/assignments/68b1a7f9ddde8cb5f8362210/watch";
 
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    document.getElementById("btn-employer").onclick = () => {
+      trackUserDetails(shop.shopid, shop.shopname, shop.marketname, "Employer");
+      window.location.href = classroom1Link;
+    };
+    document.getElementById("btn-employee").onclick = () => {
+      trackUserDetails(shop.shopid, shop.shopname, shop.marketname, "Employee");
+      window.location.href = classroom2Link;
+    };
+  </script>
+</body>
 </html>
+
+
