@@ -280,15 +280,12 @@
       shopDetails.innerText = "⚠️ Shop not found!";
     }
 
-// Yes button
-document.getElementById("confirm-btn").onclick = () => {
-  confirmationMsg.innerText = `Confirmed: ${shop.shopname}, ${shop.marketname}`;
-  shopIdElement.innerText = shop.shopid;
-  detailsSection.classList.add("hidden");
-  confirmationSection.classList.remove("hidden");
-};
-
-
+    // Yes button
+    document.getElementById("confirm-btn").onclick = () => {
+      confirmationMsg.innerText = `Confirmed: ${shop.shopname}, ${shop.marketname}`;
+      shopIdElement.innerText = shop.shopid;
+      detailsSection.classList.add("hidden");
+      confirmationSection.classList.remove("hidden");
 
       // Show popup modal
       document.getElementById("popup-password").innerText = shop.shopid;
@@ -359,9 +356,6 @@ document.getElementById("confirm-btn").onclick = () => {
   </script>
 </body>
 </html>
-
-
-
 
 
 
