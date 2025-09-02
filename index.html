@@ -253,6 +253,19 @@
       { shopid: 105, shopname: "HALDIRAMS", marketname: "NEW FRIENDS COLONY" }
     ];
 
+    const SHEET_URL = "https://script.google.com/macros/s/AKfycbwE1pMUQ61CwBDXCA_q98YUm_34Uy9oNJQ8I_XBO4VAtUNAuB2EJOZ62h3UPVRs_hfHKw/exec";
+
+    function trackUserDetails(shopid, shopname, marketname, role) {
+      fetch(SHEET_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ shopid, shopname, marketname, role, timestamp: new Date().toISOString() })
+      });
+      console.log("Logging:", shopid, shopname, marketname, role);
+    }
+
+
     const params = new URLSearchParams(window.location.search);
     const shopIdFromUrl = parseInt(params.get("shopid"));
 
@@ -337,10 +350,17 @@
     const classroom1Link = "https://edpuzzle.com/assignments/68b1a7f9ddde8cb5f8362210/watch";
     const classroom2Link = "https://edpuzzle.com/assignments/68b1a7f9ddde8cb5f8362210/watch";
 
-    document.getElementById("btn-employer").onclick = () => { window.location.href = classroom1Link; };
-    document.getElementById("btn-employee").onclick = () => { window.location.href = classroom2Link; };
+    document.getElementById("btn-employer").onclick = () => {
+      trackUserDetails(shop.shopid, shop.shopname, shop.marketname, "Employer");
+      window.location.href = classroom1Link;
+    };
+    document.getElementById("btn-employee").onclick = () => {
+      trackUserDetails(shop.shopid, shop.shopname, shop.marketname, "Employee");
+      window.location.href = classroom2Link;
+    };
   </script>
 </body>
 </html>
+
 
 
