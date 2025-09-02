@@ -63,19 +63,16 @@ body::before {
     /* Container */
 .container {
   max-width: 750px;
-  margin: -40px auto 60px;
-  background: rgba(255, 255, 255, 0.95); /* white with slight transparency */
+  margin: 40px auto;  /* moved it up by reducing top margin */
+  background: rgba(255, 255, 255, 0.95); /* clean white overlay */
   border-radius: 14px;
   padding: 40px;
-  animation: fadeIn 1s ease-in-out;
 
-  /* remove shadow */
+  /* no shadow */
   box-shadow: none;
-}
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  /* no fade-in */
+  animation: none;
 }
 
 
@@ -371,6 +368,7 @@ body::before {
   </script>
 </body>
 </html>
+
 
 
 
