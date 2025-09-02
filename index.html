@@ -281,11 +281,14 @@
     }
 
     // Yes button
-    document.getElementById("confirm-btn").onclick = () => {
-      confirmationMsg.innerText = `Confirmed: ${shop.shopname}, ${shop.marketname}`;
-      shopIdElement.innerText = shop.shopid;
-      detailsSection.classList.add("hidden");
-      confirmationSection.classList.remove("hidden");
+    // Yes button
+document.getElementById("confirm-btn").onclick = () => {
+  confirmationMsg.innerHTML = `Confirmed: <strong style="font-size:1.2rem;">${shop.shopname}, ${shop.marketname}</strong>`;
+  shopIdElement.innerText = shop.shopid;
+  detailsSection.classList.add("hidden");
+  confirmationSection.classList.remove("hidden");
+};
+
 
       // Show popup modal
       document.getElementById("popup-password").innerText = shop.shopid;
@@ -356,6 +359,7 @@
   </script>
 </body>
 </html>
+
 
 
 
