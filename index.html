@@ -2,15 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>POSH Training For Urban Retail</title>
+  <title>POSH Training Portal</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: #f9fafc;
-      color: #333;
-    }
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  color: #333;
+  background: url("assets/img2.png") center/cover no-repeat fixed;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
 
     /* Hero Section */
     .hero {
@@ -373,6 +381,7 @@
   </script>
 </body>
 </html>
+
 
 
 
