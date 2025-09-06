@@ -132,7 +132,28 @@
     </div>
   </div>
 
+  <!-- Popup Modal -->
+  <div id="passwordModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h3>Your Password</h3>
+      <p><span id="popup-password"></span></p>
+      <button class="copy-btn" onclick="copyPassword()">Copy Password</button>
+      <p id="copy-msg" style="color:green; display:none; margin-top:10px;">Password copied!</p>
+    </div>
+  </div>
+
   <script>
+    // Sample shop data
+    const shopData = [
+      { shopid: 101, shopname: "FABINDIA", marketname: "KHAN MARKET" },
+      { shopid: 102, shopname: "BLUE TOKAI", marketname: "RAJOURI GARDEN" },
+      { shopid: 103, shopname: "SHOPPE", marketname: "HAUZ KHAS VILLAGE" },
+      { shopid: 104, shopname: "NAPPA DORI", marketname: "VASANT VIHAR" },
+      { shopid: 105, shopname: "HALDIRAMS", marketname: "NEW FRIENDS COLONY" }
+    ];
+  <script>
+    
     const SHEET_URL = "https://script.google.com/macros/s/AKfycbwBCa-w0fFO_AsZWb8VF3foJVHgFmJMULqTZMFo00rZt48bQ4VR26jqTEjf-KmGdSPeaQ/exec";
 
     // Visit Counter using localStorage
@@ -232,3 +253,4 @@
   </script>
 </body>
 </html>
+
